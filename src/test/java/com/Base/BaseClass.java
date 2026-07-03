@@ -44,7 +44,7 @@ public class BaseClass {
 		
 		if(result.getStatus() == ITestResult.FAILURE) {
 			logger.error("Test Failed: " + result.getName());
-			ScreenshotUtil.captureScreenshot(driver);
+			ScreenshotUtil.captureScreenshot(driver, result.getName());
 		}
 	}
 }

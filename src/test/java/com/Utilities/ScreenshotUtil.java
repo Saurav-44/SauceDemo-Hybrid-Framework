@@ -16,26 +16,53 @@ public class ScreenshotUtil {
 	
 	public static Logger logger = LogManager.getLogger(ScreenshotUtil.class);
 	
-	 public static void captureScreenshot(WebDriver driver) {
+	public static void captureScreenshot(WebDriver driver, String pageName) {
 
-	        try {
-	            TakesScreenshot ts = (TakesScreenshot) driver;
-	            File source = ts.getScreenshotAs(OutputType.FILE);
-	            String filePath = "./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png";
+		try {
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			String filePath = "./Screenshots/SauceDemo_" + pageName + "_" +getCurrentDateTime() + ".png";
 
-	            FileUtils.copyFile(source, new File("./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png"));
-	            logger.info("Screenshot captured successfully: " + filePath);
+			FileUtils.copyFile(source, new File(filePath));
+			logger.info("Screenshot captured successfully: " + filePath);
 
-	        } catch (Exception e) {
-	        	logger.info("Exception while taking screenshot", e);
-	            
-	        }
-	    }
+		} catch (Exception e) {
+			logger.info("Exception while taking screenshot", e);
 
-	    public static String getCurrentDateTime() {
+		}
+	}
 
-	        DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
-	        Date currentDate = new Date();
-	        return customFormat.format(currentDate);
-	    }
+	public static String getCurrentDateTime() {
+
+		DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+		Date currentDate = new Date();
+		return customFormat.format(currentDate);
+	}
 }
+
+
+
+
+//public static void captureScreenshot(WebDriver driver) {
+//
+//       try {
+//           TakesScreenshot ts = (TakesScreenshot) driver;
+//           File source = ts.getScreenshotAs(OutputType.FILE);
+//           String filePath = "./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png";
+//
+//           FileUtils.copyFile(source, new File("./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png"));
+//           logger.info("Screenshot captured successfully: " + filePath);
+//
+//       } catch (Exception e) {
+//       	logger.info("Exception while taking screenshot", e);
+//           
+//       }
+//   }
+//
+//   public static String getCurrentDateTime() {
+//
+//       DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+//       Date currentDate = new Date();
+//       return customFormat.format(currentDate);
+//   }
+//}
