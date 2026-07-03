@@ -16,7 +16,7 @@ public class ScreenshotUtil {
 	
 	public static Logger logger = LogManager.getLogger(ScreenshotUtil.class);
 	
-	public static void captureScreenshot(WebDriver driver, String pageName) {
+	public static String captureScreenshot(WebDriver driver, String pageName) {
 
 		try {
 			TakesScreenshot ts = (TakesScreenshot) driver;
@@ -25,11 +25,16 @@ public class ScreenshotUtil {
 
 			FileUtils.copyFile(source, new File(filePath));
 			logger.info("Screenshot captured successfully: " + filePath);
+			return filePath;
 
 		} catch (Exception e) {
 			logger.info("Exception while taking screenshot", e);
-
+			return null;
 		}
+		
+		
+		
+		
 	}
 
 	public static String getCurrentDateTime() {

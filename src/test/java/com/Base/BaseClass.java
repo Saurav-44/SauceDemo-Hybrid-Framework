@@ -15,6 +15,8 @@ import com.Utilities.BrowserFactory;
 import com.Utilities.ConfigDataProvider;
 import com.Utilities.ExcelDataProvider;
 import com.Utilities.ScreenshotUtil;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 public class BaseClass {
 	
@@ -23,6 +25,8 @@ public class BaseClass {
 	public ConfigDataProvider config;
 	
 	public static Logger logger = LogManager.getLogger(BaseClass.class);
+	protected ExtentReports extent = ExtentManager.getInstance();
+	protected ExtentTest test;
 	
 	@BeforeSuite
 	public void setUp() {
@@ -46,7 +50,13 @@ public class BaseClass {
 		
 		if(result.getStatus() == ITestResult.FAILURE) {
 			logger.error("Test Failed: " + result.getName());
-			ScreenshotUtil.captureScreenshot(driver, result.getName());
+			test.fail(result.getThrowable());
+			String path = ScreenshotUtil.captureScreenshot(driver, result.getName());
+			test.addScreenCaptureFromPath(path);
+		}
+		
+		else if(result.getStatus() == ITestResult.SUCCESS) {
+			test.pass("Test Passed");
 		}
 	}
 	

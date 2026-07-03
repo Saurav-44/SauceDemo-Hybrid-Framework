@@ -26,9 +26,6 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class SauceDemoTest extends BaseClass{
 	
-	ExtentReports extent = ExtentManager.getInstance();
-	ExtentTest test;
-	
 	@Test
 	public void loginTest() {
 		

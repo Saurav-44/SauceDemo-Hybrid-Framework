@@ -8,6 +8,7 @@
           <include name="loginTest"/>
           <include name="screenshotFailure"/>
           <include name="setUp"/>
+          <include name="afterSuite"/>
           <include name="BrowserTest"/>
           <include name="tearDown"/>
         </methods>
