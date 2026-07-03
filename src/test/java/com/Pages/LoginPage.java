@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Utilities.ScreenshotUtil;
+
 public class LoginPage {
 	
 	WebDriver driver;
@@ -27,6 +29,7 @@ public class LoginPage {
 	public void loginSauceDemo(String username, String password) {
 		user.sendKeys(username);
 		pass.sendKeys(password);
+		ScreenshotUtil.captureScreenshot(driver, "LoginPage");
 		btn.click();
 	}
 	

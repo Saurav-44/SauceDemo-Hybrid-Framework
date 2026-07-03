@@ -42,7 +42,6 @@ public class SauceDemoTest extends BaseClass{
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginSauceDemo(username, password);
-		ScreenshotUtil.captureScreenshot(driver, "LoginPage");
 //		Assert.assertTrue(driver.findElement(By.cssSelector("h3[data-test='error']")).isDisplayed(), "Error");
 	
 		ProductsPage product = new ProductsPage(driver);
@@ -57,9 +56,9 @@ public class SauceDemoTest extends BaseClass{
 		cart.clickBtn();
 		
 		CheckoutPage cp = new CheckoutPage(driver);
-		ScreenshotUtil.captureScreenshot(driver, "CheckoutPage");
-//		Assert.assertEquals(cp.getCheckoutTitle(), "Checkout: Your Information");
 		cp.getCheckoutInfo("Saurav", "Kumar", "500032");
+//		Assert.assertEquals(cp.getCheckoutTitle(), "Checkout: Your Information");
+		
 		
 		
 		CheckoutOverviewPage cop = new CheckoutOverviewPage(driver);
