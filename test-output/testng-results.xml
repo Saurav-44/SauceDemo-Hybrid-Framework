@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-03T21:13:32 IST" name="Default suite" finished-at="2026-07-03T21:13:42 IST" duration-ms="9631">
+  <suite started-at="2026-07-03T21:17:07 IST" name="Default suite" finished-at="2026-07-03T21:17:20 IST" duration-ms="12740">
     <groups>
     </groups>
-    <test started-at="2026-07-03T21:13:32 IST" name="Default test" finished-at="2026-07-03T21:13:42 IST" duration-ms="9631">
+    <test started-at="2026-07-03T21:17:07 IST" name="Default test" finished-at="2026-07-03T21:17:20 IST" duration-ms="12740">
       <class name="com.Tests.SauceDemoTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:31 IST" name="setUp" finished-at="2026-07-03T21:13:32 IST" duration-ms="850" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:05 IST" name="setUp" finished-at="2026-07-03T21:17:07 IST" duration-ms="1850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="BrowserTest()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:32 IST" name="BrowserTest" finished-at="2026-07-03T21:13:38 IST" duration-ms="5391" status="PASS">
+        <test-method is-config="true" signature="BrowserTest()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:07 IST" name="BrowserTest" finished-at="2026-07-03T21:17:15 IST" duration-ms="7722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserTest -->
-        <test-method signature="loginTest()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:38 IST" name="loginTest" finished-at="2026-07-03T21:13:41 IST" duration-ms="3561" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:15 IST" name="loginTest" finished-at="2026-07-03T21:17:18 IST" duration-ms="3602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="screenshotFailure(org.testng.ITestResult)[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:41 IST" name="screenshotFailure" finished-at="2026-07-03T21:13:41 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="screenshotFailure(org.testng.ITestResult)[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:19 IST" name="screenshotFailure" finished-at="2026-07-03T21:17:19 IST" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotFailure -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:41 IST" name="tearDown" finished-at="2026-07-03T21:13:42 IST" duration-ms="395" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:19 IST" name="tearDown" finished-at="2026-07-03T21:17:20 IST" duration-ms="1081" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:13:42 IST" name="afterSuite" finished-at="2026-07-03T21:13:42 IST" duration-ms="423" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.Tests.SauceDemoTest@5305c37d]" started-at="2026-07-03T21:17:20 IST" name="afterSuite" finished-at="2026-07-03T21:17:20 IST" duration-ms="679" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
