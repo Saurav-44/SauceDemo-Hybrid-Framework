@@ -6,9 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
+import com.Reports.ExtentManager;
 import com.Utilities.BrowserFactory;
 import com.Utilities.ConfigDataProvider;
 import com.Utilities.ExcelDataProvider;
@@ -46,5 +48,10 @@ public class BaseClass {
 			logger.error("Test Failed: " + result.getName());
 			ScreenshotUtil.captureScreenshot(driver, result.getName());
 		}
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		ExtentManager.flushReport();
 	}
 }
