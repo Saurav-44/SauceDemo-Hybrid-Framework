@@ -1,5 +1,7 @@
 package com.Base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -18,8 +20,11 @@ public class BaseClass {
 	public ExcelDataProvider excel;
 	public ConfigDataProvider config;
 	
+	public static Logger logger = LogManager.getLogger(BaseClass.class);
+	
 	@BeforeSuite
 	public void setUp() {
+		logger.info("Initializing Excel and Config files");
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();
 	}
@@ -38,6 +43,7 @@ public class BaseClass {
 	public void screenshotFailure(ITestResult result) {
 		
 		if(result.getStatus() == ITestResult.FAILURE) {
+			logger.error("Test Failed: " + result.getName());
 			ScreenshotUtil.captureScreenshot(driver);
 		}
 	}

@@ -6,11 +6,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtil {
+	
+	public static Logger logger = LogManager.getLogger(ScreenshotUtil.class);
+	
 	 public static void captureScreenshot(WebDriver driver) {
 
 	        try {
@@ -19,10 +24,10 @@ public class ScreenshotUtil {
 	            String filePath = "./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png";
 
 	            FileUtils.copyFile(source, new File("./Screenshots/SauceDemo_" + getCurrentDateTime() + ".png"));
-	            System.out.println("Captured Screenshot");
+	            logger.info("Screenshot captured successfully: " + filePath);
 
 	        } catch (Exception e) {
-	            System.out.println("Exception while taking screenshot" + e.getMessage());
+	        	logger.info("Exception while taking screenshot", e);
 	            
 	        }
 	    }

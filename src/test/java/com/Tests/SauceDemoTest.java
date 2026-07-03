@@ -29,7 +29,7 @@ public class SauceDemoTest extends BaseClass{
 	ExtentTest test;
 	
 	@Test
-	public void loginTest() throws InterruptedException {
+	public void loginTest() {
 		
 		test = extent.createTest("SauceDemo Login Test");
 		
@@ -63,7 +63,7 @@ public class SauceDemoTest extends BaseClass{
 //		Assert.assertEquals(cop.getCheckoutOverviewTitle(), "Checkout: Overview");
 		
 		cop.clickFinish();
-		Thread.sleep(3000);
+	
 		
 		CheckoutCompletePage coop = new CheckoutCompletePage(driver);
 		coop.getCheckoutCompleteInfo();
