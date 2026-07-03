@@ -72,7 +72,7 @@ public class SauceDemoTest extends BaseClass{
 		ScreenshotUtil.captureScreenshot(driver, "CompletePage");
 		coop.getCheckoutCompleteInfo();
 //		Assert.assertEquals(coop.getCheckoutCompleteInfo(), "Checkout: Complete!");
-		extent.flush();
+		
 		
 
 		
